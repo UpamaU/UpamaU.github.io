@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #000000;
     color: white;
     padding: 1em 0;
 }
@@ -33,7 +33,7 @@ main {
 }
 
 footer {
-    background-color: #333;
+    background-color: #000000;
     color: white;
     text-align: center;
     padding: 1em 0;
@@ -47,7 +47,6 @@ img {
     height: auto;
 }
 
-.navbar-brand {
+.navbar {
     font-family: "Lucida Console", "Courier New", monospace;
 }
-
