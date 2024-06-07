@@ -9,9 +9,13 @@
 </head>
 <body>
     <header>
+        <!-- Main header for the title -->
+        <div class="container-fluid bg-dark py-2">
+            <h1 class="text-center text-white">Coco Hair</h1>
+        </div>
+        <!-- Navigation bar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Coco Hair</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -29,13 +33,23 @@
     </header>
 
     <main class="container mt-5">
-        <h1 class="display-4">Contact Us</h1>
+        <h2>Contact Us</h2>
         <p>If you have any questions or would like to book an appointment, feel free to reach out to us!</p>
-        <ul class="list-group">
-            <li class="list-group-item">Phone: (123) 456-7890</li>
-            <li class="list-group-item">Email: contact@yourhairsalon.com</li>
-            <li class="list-group-item">Address: 123 Main Street, Your City, YC 12345</li>
-        </ul>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Your Email</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </main>
 
     <footer class="bg-dark text-white text-center py-3">

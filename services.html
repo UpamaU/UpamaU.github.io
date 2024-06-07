@@ -9,9 +9,13 @@
 </head>
 <body>
     <header>
+        <!-- Main header for the title -->
+        <div class="container-fluid bg-dark py-2">
+            <h1 class="text-center text-white">Coco Hair</h1>
+        </div>
+        <!-- Navigation bar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Coco Hair</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -29,13 +33,33 @@
     </header>
 
     <main class="container mt-5">
-        <h1 class="display-4">Our Services</h1>
-        <ul class="list-group">
-            <li class="list-group-item">Haircut - $30</li>
-            <li class="list-group-item">Hair Coloring - $60</li>
-            <li class="list-group-item">Hair Styling - $40</li>
-     
-        </ul>
+        <h2>Our Services</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Haircut</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Coloring</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Styling</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="bg-dark text-white text-center py-3">
