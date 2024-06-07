@@ -9,9 +9,13 @@
 </head>
 <body>
     <header>
+        <!-- Main header for the title -->
+        <div class="container-fluid bg-dark py-2">
+            <h1 class="text-center text-white">Coco Hair</h1>
+        </div>
+        <!-- Navigation bar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Coco Hair</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -29,32 +33,25 @@
     </header>
 
     <main class="container mt-5">
-        <h1 class="display-4">Book an Appointment</h1>
+        <h2>Book Now</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
         <form>
             <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" required>
+                <label for="date" class="form-label">Select Date</label>
+                <input type="date" class="form-control" id="date">
             </div>
             <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" required>
-            </div>
-            <div class="mb-3">
-                <label for="phone" class="form-label">Phone</label>
-                <input type="tel" class="form-control" id="phone" required>
-            </div>
-            <div class="mb-3">
-                <label for="date" class="form-label">Preferred Date</label>
-                <input type="date" class="form-control" id="date" required>
-            </div>
-            <div class="mb-3">
-                <label for="service" class="form-label">Service</label>
-                <select class="form-select" id="service" required>
-                    <option value="Haircut">Haircut</option>
-                    <option value="Hair Coloring">Hair Coloring</option>
-                    <option value="Hair Styling">Hair Styling</option>
-                    <!-- Add more services as needed -->
+                <label for="service" class="form-label">Select Service</label>
+                <select class="form-select" id="service">
+                    <option selected>Select Service</option>
+                    <option value="1">Service 1</option>
+                    <option value="2">Service 2</option>
+                    <option value="3">Service 3</option>
                 </select>
+            </div>
+            <div class="mb-3">
+                <label for="time" class="form-label">Select Time</label>
+                <input type="time" class="form-control" id="time">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
