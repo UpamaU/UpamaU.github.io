@@ -86,3 +86,7 @@ img {
         font-size: 1.2em; /* Smaller font size for smaller screens */
     }
 }
+.custom-title {
+    color: white !important;
+}
+
