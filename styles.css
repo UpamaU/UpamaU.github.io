@@ -37,6 +37,7 @@ img {
 
 .custom-link {
     color: #ffffff; /* White text color */
+    font-size: 20px;
 }
 
 .navbar-dark .navbar-brand,
@@ -88,5 +89,6 @@ img {
 }
 .custom-title {
     color: white !important;
+    font-size: 30px;
 }
 
