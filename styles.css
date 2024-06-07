@@ -58,3 +58,15 @@ img {
     background-color: #757575; /* Dark background for the primary navbar */
     color: #ffffff; /* White font color */
 }
+
+/* Media queries to adjust the font size based on screen width */
+@media (max-width: 768px) {
+    .navbar-primary .nav-link,
+    .navbar-secondary .nav-link {
+        font-size: 1em; /* Smaller font size for smaller screens */
+    }
+    .navbar-primary .navbar-brand,
+    .navbar-secondary .navbar-brand {
+        font-size: 1.2em; /* Smaller font size for smaller screens */
+    }
+}
