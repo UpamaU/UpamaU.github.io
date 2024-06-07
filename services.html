@@ -5,7 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - Coco Hair</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Custom styles for the cards */
+        .warning-card {
+            background-color: #f8f9fa; /* Light grey background */
+            border: 1px solid #ced4da;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .section-links-card {
+            background-color: #198754; /* Dark green background */
+            color: #ffffff; /* White text color */
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .service-card {
+            background-color: #343a40; /* Dark grey background */
+            color: #ffffff; /* White text color */
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -34,43 +59,44 @@
 
     <main class="container mt-5">
         <h2>Our Services</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <p class="card-text">Please note that all prices listed are a base price. 
-                            Prices can vary depending on many factors including hair length, texture, 
-                            level of Stylist, and/or creative process. Pricing is subject to change without notice.</p>
-                    </div>
-                </div>
+
+        <!-- Warning bubble card -->
+        <div class="card warning-card">
+            <p class="card-text">Please note that all prices listed are a base price. Prices can vary depending on many factors including hair length, texture, level of Stylist, and/or creative process. Pricing is subject to change without notice.</p>
+        </div>
+
+        <!-- Dark green background card with links -->
+        <div class="card section-links-card">
+            <div class="card-body">
+                <a href="#cut-and-style" class="card-link">Cut & Style</a>
+                <a href="#colour-and-highlights" class="card-link">Colour & Highlights</a>
+                <a href="#hair-treatments" class="card-link">Hair Treatments</a>
+                <!-- Add more links for each service -->
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Haircut</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Coloring</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Styling</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
-                    </div>
-                </div>
+
+        <!-- Service cards -->
+        <div id="cut-and-style" class="card service-card">
+            <div class="card-body">
+                <h5 class="card-title">Cut & Style</h5>
+                <p class="card-text">Description of the Cut & Style service.</p>
             </div>
         </div>
+        
+        <div id="colour-and-highlights" class="card service-card">
+            <div class="card-body">
+                <h5 class="card-title">Colour & Highlights</h5>
+                <p class="card-text">Description of the Colour & Highlights service.</p>
+            </div>
+        </div>
+
+        <div id="hair-treatments" class="card service-card">
+            <div class="card-body">
+                <h5 class="card-title">Hair Treatments</h5>
+                <p class="card-text">Description of the Hair Treatments service.</p>
+            </div>
+        </div>
+        
     </main>
 
     <footer class="bg-dark text-white text-center py-3">
