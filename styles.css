@@ -91,4 +91,19 @@ img {
     color: white !important;
     font-size: 40px;
 }
-
+.caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.location-image:hover .caption {
+    opacity: 1;
+}
