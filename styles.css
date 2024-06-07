@@ -13,23 +13,6 @@ header {
 
 nav {
     background-color: #757575;
-    text-align: center; /* Center the navbar items */
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: inline-block; /* Display the navbar items as inline block */
-}
-
-nav ul li {
-    display: inline-block; /* Display the navbar items as inline block */
-    margin: 0 1em;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
 }
 
 main {
