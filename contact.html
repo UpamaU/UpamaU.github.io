@@ -41,26 +41,31 @@
     </nav>
 
     <main class="container mt-5">
-        <h2>Contact Us</h2>
-        <p>If you have any questions or would like to book an appointment, feel free to reach out to us!</p>
         <div>
             <img src="images/75laurier.png" alt="Location Image" class="img-fluid">
         </div>
-        <form>
-            <div class="mb-3">
-                <label for="name" class="form-label">Your Name</label>
-                <input type="text" class="form-control" id="name">
+        
+        <div class="card section-links-card">
+            <div class="card-body">
+                <h2>Contact Us</h2>
+                <p>If you have any questions or would like to book an appointment, feel free to reach out to us!</p>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
             </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Your Email</label>
-                <input type="email" class="form-control" id="email">
-            </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="3"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        </div>
     </main>
 
     <footer class="bg-dark text-white text-center py-3">
