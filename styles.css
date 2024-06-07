@@ -47,6 +47,7 @@ img {
     height: auto;
 }
 
+/* Set the background color of the navbar */
 .navbar {
-    font-family: "Lucida Console", "Courier New", monospace;
+    background-color: #00ff00; /* Green background color */
 }
