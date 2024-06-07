@@ -39,14 +39,22 @@ img {
     color: #ffffff; /* White text color */
 }
 
-.navbar-dark .navbar-brand, .navbar-dark .nav-link, .navbar-light .nav-link {
+.navbar-dark .navbar-brand,
+.navbar-dark .nav-link,
+.navbar-light .nav-link {
     text-align: center;
 }
 
 .navbar-nav {
+    display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around; /* Ensure equal spacing */
     width: 100%;
+}
+
+/* Centering the navbar brand */
+.navbar-brand {
+    margin: auto;
 }
 
 .navbar-primary {
@@ -55,7 +63,7 @@ img {
 }
 
 .navbar-secondary {
-    background-color: #757575; /* Dark background for the primary navbar */
+    background-color: #757575; /* Dark background for the secondary navbar */
     color: #ffffff; /* White font color */
 }
 
