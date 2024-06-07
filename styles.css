@@ -11,14 +11,19 @@ header {
     padding: 1em 0;
 }
 
+nav {
+    background-color: #757575;
+    text-align: center; /* Center the navbar items */
+}
+
 nav ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
     padding: 0;
+    display: inline-block; /* Display the navbar items as inline block */
 }
 
 nav ul li {
+    display: inline-block; /* Display the navbar items as inline block */
     margin: 0 1em;
 }
 
@@ -47,11 +52,6 @@ img {
     height: auto;
 }
 
-/* Set the background color of the navbar */
-nav {
-    background-color: #757575; 
-}
-
-.custom-link{
+.custom-link {
     color: #ffffff; /* White text color */
 }
