@@ -48,8 +48,15 @@ img {
 .navbar-nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-around; /* Ensure equal spacing */
+    justify-content: space-between; /* Ensure equal spacing */
     width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    flex: 1; /* Equal spacing for all items */
+    text-align: center;
 }
 
 /* Centering the navbar brand */
