@@ -55,9 +55,3 @@ nav {
 .custom-link{
     color: #ffffff; /* White text color */
 }
-
-/* Custom CSS for centering navbars */
-.center-navbar {
-    display: flex;
-    justify-content: center;
-}
