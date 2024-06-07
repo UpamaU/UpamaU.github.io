@@ -93,17 +93,12 @@ img {
 }
 .caption {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
     color: white;
-    padding: 10px 20px;
     text-align: center;
-    font-size: 16px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-.location-image:hover .caption {
-    opacity: 1;
+    padding: 5px;
+    font-size: 12px;
 }
