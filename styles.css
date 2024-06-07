@@ -38,3 +38,13 @@ img {
 .custom-link {
     color: #ffffff; /* White text color */
 }
+
+.navbar-dark .navbar-brand, .navbar-dark .nav-link, .navbar-light .nav-link {
+    text-align: center;
+}
+
+.navbar-nav {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
