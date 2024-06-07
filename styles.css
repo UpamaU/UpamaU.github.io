@@ -46,3 +46,8 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+.navbar-brand {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
