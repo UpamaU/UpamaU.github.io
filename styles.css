@@ -48,3 +48,13 @@ img {
     justify-content: center;
     width: 100%;
 }
+
+.navbar-primary {
+    background-color: #000000; /* Dark background for the primary navbar */
+    color: #ffffff; /* White font color */
+}
+
+.navbar-secondary {
+    background-color: #757575; /* Dark background for the primary navbar */
+    color: #ffffff; /* White font color */
+}
