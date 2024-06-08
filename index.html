@@ -29,16 +29,27 @@
             background-color: rgba(0, 0, 0, 0.8); /* Dark transparent background */
             color: white;
             width: 100%;
-            padding: 10px; /*  padding */
+            padding: 20px; /* Increased padding */
             text-align: center;
             border-radius: 10px; /* Less rounded corners */
-            margin-bottom: 20px; /*  space between cards */
+            margin-bottom: 10px; /* Reduced space between cards */
             display: flex;
             align-items: center;
             justify-content: center;
-            height: auto; /* Adjusted height */
-            font-size: 1.3em; /* Increased font size */
+            height: auto; /* Allow height to adjust based on content */
+            font-size: 5vw; /* Responsive font size */
             font-weight: bold; /* Bold text */
+        }
+        /* Adjust font size for larger screens */
+        @media (min-width: 768px) {
+            .overlay {
+                font-size: 2vw;
+            }
+        }
+        @media (min-width: 992px) {
+            .overlay {
+                font-size: 1.5vw;
+            }
         }
     </style>
 </head>
