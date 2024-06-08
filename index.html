@@ -13,23 +13,26 @@
         .image-overlay {
             position: relative;
             display: inline-block;
+            width: 100%;
         }
         .overlay {
             position: absolute;
-            background-color: rgba(0, 0, 0, 0.8); /* Transparent black background */
+            background-color: rgba(0, 0, 0, 0.8); /* Dark transparent background */
             color: white;
-            width: 100%;
-            padding: 10px;
+            width: 80%;
+            max-width: 300px;
+            padding: 20px;
             text-align: center;
+            border-radius: 50px; /* Oval shape */
+            margin: 0 auto;
+            left: 50%;
+            transform: translateX(-50%);
         }
         .top-overlay {
-            top: 10%; /* 20% from the top of the image */
+            top: 20%; /* 20% from the top of the image */
         }
         .bottom-overlay {
-            top: 50%; /* 10% from the bottom of the image */
-        }
-        .custom-card-writing{
-            color: white !important;
+            bottom: 10%; /* 10% from the bottom of the image */
         }
     </style>
 </head>
@@ -67,21 +70,13 @@
 
         <!-- Top caption -->
         <div class="overlay top-overlay">
-            <div class="card bg-transparent border-0">
-                <div class="card-body">
-                    <p class="card-text custom-card-writing">DEAL OF THE DAY: BANG TRIMS FOR $5</p>
-                </div>
-            </div>
+            <p>DEAL OF THE DAY: BANG TRIMS FOR $5</p>
         </div>
 
         <!-- Bottom caption -->
         <a href="book.html">
             <div class="overlay bottom-overlay">
-                <div class="card bg-transparent border-0">
-                    <div class="card-body">
-                        <p class="card-text custom-card-writing">Book Now</p>
-                    </div>
-                </div>
+                <p>Book Now</p>
             </div>
         </a>
     </div>
