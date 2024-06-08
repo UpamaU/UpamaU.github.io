@@ -15,24 +15,24 @@
             display: inline-block;
             width: 100%;
         }
-        .overlay {
+        .overlay-container {
             position: absolute;
-            background-color: rgba(0, 0, 0, 0.8); /* Dark transparent background */
-            color: white;
             width: 80%;
-            max-width: 300px;
-            padding: 20px;
-            text-align: center;
-            border-radius: 50px; /* Oval shape */
-            margin: 0 auto;
+            max-width: 400px;
             left: 50%;
             transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .top-overlay {
-            top: 20%; /* 20% from the top of the image */
-        }
-        .bottom-overlay {
-            bottom: 10%; /* 10% from the bottom of the image */
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.8); /* Dark transparent background */
+            color: white;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px; /* Less rounded corners */
+            margin-bottom: 20px; /* Space between cards */
         }
     </style>
 </head>
@@ -68,17 +68,20 @@
     <div class="image-overlay">
         <img src="images/hairsalon.jpeg" alt="Hair Salon" class="img-fluid">
 
-        <!-- Top caption -->
-        <div class="overlay top-overlay">
-            <p>DEAL OF THE DAY: BANG TRIMS FOR $5</p>
-        </div>
-
-        <!-- Bottom caption -->
-        <a href="book.html">
-            <div class="overlay bottom-overlay">
-                <p>Book Now</p>
+        <!-- Container for both captions -->
+        <div class="overlay-container" style="top: 20%;">
+            <!-- Top caption -->
+            <div class="overlay">
+                <p>DEAL OF THE DAY: BANG TRIMS FOR $5</p>
             </div>
-        </a>
+
+            <!-- Bottom caption -->
+            <a href="book.html">
+                <div class="overlay">
+                    <p>Book Now</p>
+                </div>
+            </a>
+        </div>
     </div>
 
     <main class="container mt-5">
