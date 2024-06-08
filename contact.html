@@ -19,6 +19,17 @@
             margin-bottom: 20px;
             font-weight: bold;
         }
+        .caption {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
     </style>
 </head>
 <body>
@@ -53,10 +64,10 @@
         <div class="mb-4">
             <a href="https://maps.app.goo.gl/gk9zEmn5qd1DdWCV9" target="_blank">
                 <img src="images/75laurier.png" alt="Location Image" class="img-fluid">
-                <div class="overlay">
-                    <p class="overlay-text">Click to open location on Google Maps</p>
-                </div>
             </a>
+            <div class="caption">
+                <p class="caption-text">Click to open location on Google Maps</p>
+            </div>
         </div>
         
         <div class="card section-links-card">
