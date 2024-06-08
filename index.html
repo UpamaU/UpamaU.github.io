@@ -52,6 +52,11 @@
             padding: 20px;
             margin-bottom: 20px;
         }
+        .home-card-title {
+            font-size: 1.5em; /* Increased font size */
+            font-weight: bold; /* Bold text */
+            margin-bottom: 10px; /* Spacing below title */
+        }
     </style>
 </head>
 <body>
@@ -113,7 +118,19 @@
             </div>
         </div>
         <!-- Second image -->
-        <img src="images/hairmodel.jpeg" alt="Hair Model" class="card-image img-fluid">
+        <div class="card mb-3">
+            <img src="images/hairmodel.jpeg" class="card-img-top" alt="Hair Model">
+            <div class="card-body">
+                <h5 class="card-title">Women's Only Hair Salon</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nunc. Donec eleifend arcu nec quam maximus congue.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Experienced Stylists Guaranteed</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nunc. Donec eleifend arcu nec quam maximus congue.</p>
+            </div>
+        </div>
     </main>
 
     <footer class="bg-dark text-white text-center py-3">
