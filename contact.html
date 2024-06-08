@@ -10,20 +10,14 @@
         .custom-title {
             color: white !important;
         }
-        .img-caption {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: none;
-        }
-        .image-container {
-            position: relative;
-            margin-bottom: 1rem;
+        .section-links-card {
+            background-color: #20583A; /* Dark green background */
+            color: #ffffff; /* White text color */
+            border: 2px solid #000000;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -56,10 +50,12 @@
     </nav>
 
     <main class="container mt-5">
-        <div class="image-container mb-4">
+        <div class="mb-4">
             <a href="https://maps.app.goo.gl/gk9zEmn5qd1DdWCV9" target="_blank">
                 <img src="images/75laurier.png" alt="Location Image" class="img-fluid">
-                <div class="img-caption">Click to open location on Google Maps</div>
+                <div class="overlay">
+                    <p class="overlay-text">Click to open location on Google Maps</p>
+                </div>
             </a>
         </div>
         
@@ -85,15 +81,17 @@
             </div>
         </div>
 
-        <div class="card section-links-card">
+        <div class="card section-links-card mt-4">
             <div class="card-body">
-                <h5 class="card-title"> <u>Hours of Operation</u></h5>
-                <p class="card-text">Monday - Friday: 9am - 7pm</p>
-                <p class="card-text">Saturday: 10am - 5pm</p>
-                <p class="card-text">Sunday: Closed</p>
-                <p class="card-text"><u>Address:</u> 75 Laurier Avenue</p>
-                <p class="card-text"><u>Phone:</u> 123-456-7890</p>
-                <p class="card-text"><u>Email</u> cocohair@gmail.com</p>
+                <h2><u>Hours of Operation</u></h2>
+                <p>Monday-Friday: 9am-6pm</p>
+                <p>Saturday: 10am-4pm</p>
+                <p>Sunday: Closed</p>
+                <h2><u>Location</u></h2>
+                <p>75 Laurier Avenue, Ottawa, ON K1N6N6</p>
+                <h2><u>Contact Information</u></h2>
+                <p>Phone: 123-456-7890</p>
+                <p>Email: cocohair@gmail.com</p>
             </div>
         </div>
     </main>

@@ -126,20 +126,6 @@ img {
 
 .overlay-text {
     font-size: 20px;
+    background-color:rgba(0, 0, 0, 0.5); ;
 }
 
-.img-caption {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    display: none;
-}
-.image-container {
-    position: relative;
-    margin-bottom: 1rem;
-}
