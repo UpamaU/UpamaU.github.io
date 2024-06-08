@@ -9,65 +9,35 @@
     <style>
         .custom-title {
             color: white !important;
+
         }
         .image-overlay {
             position: relative;
             display: inline-block;
-            width: 100%;
-        }
-        .intro-text {
-            position: absolute;
-            top: 10%;
-            left: 50%;
-            transform: translateX(-50%);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
-            font-size: 3vw;
-        }
-        .overlay-container {
-            position: absolute;
-            bottom: 10%;
-            width: 80%;
-            max-width: 400px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
         .overlay {
-            background-color: rgba(0, 0, 0, 0.8); /* Dark transparent background */
+            position: absolute;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
             color: white;
             width: 100%;
-            padding: 20px; /* Increased padding */
+            padding: 10px;
             text-align: center;
-            border-radius: 10px; /* Less rounded corners */
-            margin-bottom: 10px; /* Reduced space between cards */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: auto; /* Allow height to adjust based on content */
-            font-size: 5vw; /* Responsive font size */
-            font-weight: bold; /* Bold text */
         }
-        /* Adjust font size for larger screens */
-        @media (min-width: 768px) {
-            .intro-text {
-                font-size: 2vw;
-            }
-            .overlay {
-                font-size: 4vw;
-            }
+        .top-overlay {
+            top: 0;
         }
-        @media (min-width: 992px) {
-            .intro-text {
-                font-size: 1.5vw;
+
+        .bottom-overlay {
+            bottom: 0;
+        }
+        /* Adjust font size for responsive design */
+        @media (max-width: 768px) {
+            .jumbotron {
+                font-size: 80%;
             }
-            .overlay {
-                font-size: 3vw;
+            .overlay p {
+                font-size: 80%;
             }
         }
     </style>
@@ -104,32 +74,25 @@
     <div class="image-overlay">
         <img src="images/hairsalon.jpeg" alt="Hair Salon" class="img-fluid">
 
-        <!-- Introductory text -->
-        <div class="intro-text">
-            <h1>Welcome to Coco Hair</h1>
-            <p class="lead">Experience the best hair care services in town.</p>
-            <hr class="my-4">
+        <!-- Top caption -->
+        <div class="overlay top-overlay">
+            <p>Welcome to Coco Hair</p>
+            <p>Experience the best hair care services in town.</p>
             <p>Book your appointment now and enjoy our special offers.</p>
-        </div>
-
-        <!-- Container for both captions -->
-        <div class="overlay-container">
-            <!-- Top caption -->
-            <div class="overlay">
-                <p>DEAL OF THE DAY: BANG TRIMS FOR $5</p>
-            </div>
-
-            <!-- Bottom caption -->
-            <a href="book.html">
-                <div class="overlay">
-                    <p>Book Now</p>
-                </div>
-            </a>
         </div>
     </div>
 
     <main class="container mt-5">
-        <!-- Removed the introductory text from here -->
+        <div class="card section-links-card mt-4">
+            <div class="card-body">
+                <h2>DEAL OF THE DAY: BANG TRIMS FOR $5</h2>
+            </div>
+        </div>
+        <div class="card section-links-card mt-4">
+            <div class="card-body">
+                <h2>Book Now</h2>
+            </div>
+        </div>
     </main>
 
     <footer class="bg-dark text-white text-center py-3">
