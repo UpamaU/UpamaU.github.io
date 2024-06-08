@@ -1,26 +1,15 @@
-// Define the validateForm function
-function validateForm(event) {
-    // Prevent the form from submitting and refreshing the page
-    event.preventDefault();
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contactForm');
+    const submitButton = document.getElementById('submitButton');
 
-    // Get the form elements
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var message = document.getElementById("message").value;
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent form submission
 
-    // Check if all fields are filled
-    if (name === "" || email === "" || message === "") {
-        alert("Please fill in all fields.");
-        return false;
-    }
-
-    // Change the submit button text to "Submitted"
-    document.getElementById("submitButton").innerText = "Submitted";
-    return true;
-}
-
-// Get the form element
-var form = document.getElementById("contactForm");
-
-// Add a submit event listener to the form
-form.addEventListener("submit", validateForm);
+        // Validate form fields
+        if (form.checkValidity()) {
+            // Change button text to "Submitted"
+            submitButton.innerText = 'Submitted';
+            submitButton.disabled = true; // Disable button to prevent multiple submissions
+        }
+    });
+});
