@@ -9,36 +9,36 @@
     <style>
         .custom-title {
             color: white !important;
-
         }
         .image-overlay {
             position: relative;
             display: inline-block;
+            width: 100%;
+        }
+        .overlay-container {
+            position: absolute;
+            width: 80%;
+            max-width: 400px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .overlay {
-            position: absolute;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+            background-color: rgba(0, 0, 0, 0.8); /* Dark transparent background */
             color: white;
             width: 100%;
-            padding: 10px;
+            padding: 10px; /*  padding */
             text-align: center;
-        }
-        .top-overlay {
-            top: 0;
-        }
-
-        .bottom-overlay {
-            bottom: 0;
-        }
-        /* Adjust font size for responsive design */
-        @media (max-width: 768px) {
-            .jumbotron {
-                font-size: 80%;
-            }
-            .overlay p {
-                font-size: 80%;
-            }
+            border-radius: 10px; /* Less rounded corners */
+            margin-bottom: 20px; /*  space between cards */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: auto; /* Adjusted height */
+            font-size: 1.3em; /* Increased font size */
+            font-weight: bold; /* Bold text */
         }
     </style>
 </head>
@@ -74,24 +74,29 @@
     <div class="image-overlay">
         <img src="images/hairsalon.jpeg" alt="Hair Salon" class="img-fluid">
 
-        <!-- Top caption -->
-        <div class="overlay top-overlay">
-            <p>Welcome to Coco Hair</p>
-            <p>Experience the best hair care services in town.</p>
-            <p>Book your appointment now and enjoy our special offers.</p>
+        <!-- Container for both captions -->
+        <div class="overlay-container" style="top: 20%;">
+            <!-- Top caption -->
+            <div class="overlay">
+                <p>DEAL OF THE DAY: BANG TRIMS FOR $5</p>
+            </div>
+
+            <!-- Bottom caption -->
+            <a href="book.html">
+                <div class="overlay">
+                    <p>Book Now</p>
+                </div>
+            </a>
         </div>
     </div>
 
     <main class="container mt-5">
-        <div class="card section-links-card mt-4">
-            <div class="card-body">
-                <h2>DEAL OF THE DAY: BANG TRIMS FOR $5</h2>
-            </div>
-        </div>
-        <div class="card section-links-card mt-4">
-            <div class="card-body">
-                <h2>Book Now</h2>
-            </div>
+        <div class="jumbotron">
+            <h1 class="display-4">Welcome to Coco Hair</h1>
+            <p class="lead">Experience the best hair care services in town.</p>
+            <hr class="my-4">
+            <p>Book your appointment now and enjoy our special offers.</p>
+            <a class="btn btn-primary btn-lg" href="services.html" role="button">Learn more</a>
         </div>
     </main>
 
