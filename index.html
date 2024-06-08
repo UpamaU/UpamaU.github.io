@@ -9,7 +9,6 @@
     <style>
         .custom-title {
             color: white !important;
-
         }
         .image-overlay {
             position: relative;
@@ -17,7 +16,6 @@
         }
         .overlay {
             position: absolute;
-            bottom: 0;
             background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
             color: white;
             width: 100%;
@@ -25,11 +23,10 @@
             text-align: center;
         }
         .top-overlay {
-            top: 0;
+            top: 20%; /* 20% from the top of the image */
         }
-
         .bottom-overlay {
-            bottom: 0;
+            bottom: 10%; /* 10% from the bottom of the image */
         }
     </style>
 </head>
@@ -67,13 +64,21 @@
 
         <!-- Top caption -->
         <div class="overlay top-overlay">
-            <p>DEAL OF THE DAY: BANG TRIMS FOR $5</p>
+            <div class="card bg-transparent border-0">
+                <div class="card-body">
+                    <p class="card-text">DEAL OF THE DAY: BANG TRIMS FOR $5</p>
+                </div>
+            </div>
         </div>
 
         <!-- Bottom caption -->
         <a href="book.html">
             <div class="overlay bottom-overlay">
-                <p>Book Now</p>
+                <div class="card bg-transparent border-0">
+                    <div class="card-body">
+                        <p class="card-text">Book Now</p>
+                    </div>
+                </div>
             </div>
         </a>
     </div>
