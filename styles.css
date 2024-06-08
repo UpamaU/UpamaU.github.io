@@ -109,22 +109,3 @@ img {
     display: inline-block;
 }
 
-.overlay {
-    position: absolute;
-    bottom: 10px; /* Adjust as needed */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    text-align: center;
-    width: 80%; /* Adjust as needed */
-    margin: 0 auto;
-    display: none;
-}
-.img-container {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 20px;
-}
