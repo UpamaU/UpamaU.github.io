@@ -10,6 +10,22 @@
         .custom-title {
             color: white !important;
         }
+        .home-card {
+            background-color: #B3B3B3; /* Light grey background */
+            color: #000000; /* Black text color */
+            border: 2px solid #000000;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .stylist-card {
+            background-color: #E0E0E0; /* Slightly lighter grey background */
+            color: #000000; /* Black text color */
+            border: 2px solid #000000;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
@@ -43,14 +59,76 @@
         </div>
     </nav>
 
+    <!-- About Us Card -->
     <main class="container mt-5">
-        <div class="row">
-            <div class="col-md-6">
-                <h2>About Us</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+        <div class="card home-card">
+            <div class="card-body">
+                <h1 class="display-4">About Us</h1>
+                <p>Here at Coco Hair, we aim to customize each service for each of our customers as everyone’s hair is unique. We also guarantee that this is a women’s only salon, ensuring a comfortable and exclusive environment for all our clients.</p>
             </div>
-            <div class="col-md-6">
-                <img src="about.jpg" alt="About Us" class="img-fluid">
+        </div>
+
+        <!-- Stylist Cards -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card stylist-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Stylist 1</h5>
+                        <p class="card-text"><strong>Role:</strong> Master Stylist</p>
+                        <p class="card-text"><strong>Experience:</strong> 10 years</p>
+                        <p class="card-text"><strong>Services:</strong> Haircut, Hair Coloring, Hair Styling</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card stylist-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Stylist 2</h5>
+                        <p class="card-text"><strong>Role:</strong> Junior Stylist</p>
+                        <p class="card-text"><strong>Experience:</strong> 3 years</p>
+                        <p class="card-text"><strong>Services:</strong> Haircut, Hair Coloring, Blow Dry</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card stylist-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Stylist 3</h5>
+                        <p class="card-text"><strong>Role:</strong> Master Stylist</p>
+                        <p class="card-text"><strong>Experience:</strong> 8 years</p>
+                        <p class="card-text"><strong>Services:</strong> Haircut, Hair Extensions, Updos</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card stylist-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Stylist 4</h5>
+                        <p class="card-text"><strong>Role:</strong> Junior Stylist</p>
+                        <p class="card-text"><strong>Experience:</strong> 2 years</p>
+                        <p class="card-text"><strong>Services:</strong> Haircut, Hair Coloring, Braids</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card stylist-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Stylist 5</h5>
+                        <p class="card-text"><strong>Role:</strong> Master Stylist</p>
+                        <p class="card-text"><strong>Experience:</strong> 15 years</p>
+                        <p class="card-text"><strong>Services:</strong> Haircut, Hair Treatments, Keratin Treatment</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card stylist-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Stylist 6</h5>
+                        <p class="card-text"><strong>Role:</strong> Junior Stylist</p>
+                        <p class="card-text"><strong>Experience:</strong> 4 years</p>
+                        <p class="card-text"><strong>Services:</strong> Haircut, Hair Coloring, Perms</p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
