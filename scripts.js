@@ -1,5 +1,8 @@
 // Define the validateForm function
-function validateForm() {
+function validateForm(event) {
+    // Prevent the form from submitting and refreshing the page
+    event.preventDefault();
+
     // Get the form elements
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
@@ -12,6 +15,12 @@ function validateForm() {
     }
 
     // Change the submit button text to "Submitted"
-    document.getElementById("submitBtn").innerText = "Submitted";
+    document.getElementById("submitButton").innerText = "Submitted";
     return true;
 }
+
+// Get the form element
+var form = document.getElementById("contactForm");
+
+// Add a submit event listener to the form
+form.addEventListener("submit", validateForm);
