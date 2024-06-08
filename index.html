@@ -111,24 +111,28 @@
     <main class="container mt-5">
         <div class="card home-card">
             <div class="card-body">
-                <h1 class="display-4">Welcome to Coco Hair</h1>
+                <h1 class="home-card-title">Welcome to Coco Hair</h1>
                 <p class="lead">Experience the best hair care services in town.</p>
                 <hr class="my-4">
                 <p>Book your appointment now and enjoy our special offers.</p>
             </div>
         </div>
-        <!-- Second image -->
-        <div class="card mb-3">
-            <img src="images/hairmodel.jpeg" class="card-img-top" alt="Hair Model">
-            <div class="card-body">
-                <h5 class="card-title">Women's Only Hair Salon</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nunc. Donec eleifend arcu nec quam maximus congue.</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Experienced Stylists Guaranteed</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nunc. Donec eleifend arcu nec quam maximus congue.</p>
+
+        <!-- Second image with overlays -->
+        <div class="image-overlay">
+            <img src="images/hairmodel.jpeg" alt="Hair Model" class="img-fluid">
+
+            <!-- Container for both captions -->
+            <div class="overlay-container" style="top: 20%;">
+                <!-- Top caption -->
+                <div class="overlay">
+                    <p>WOMEN'S ONLY HAIR SALON</p>
+                </div>
+
+                <!-- Bottom caption -->
+                <div class="overlay">
+                    <p>EXPERIENCED STYLISTS GUARANTEED</p>
+                </div>
             </div>
         </div>
     </main>
@@ -137,4 +141,6 @@
         <p>&copy; 2024 Coco Hair Salon. All rights reserved.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf"></script>
+</body>
+</html>
