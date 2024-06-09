@@ -121,6 +121,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     dateInput.addEventListener('change', function() {
+        serviceSelect.innerHTML = '<option selected disabled>Select Service</option>'; // Reset service options
+        // Re-add service options
+        const services = [
+            "Full Colour", "Ombre", "Regular Haircut", "Curly Cut", "Wash and Style",
+            "Partial Highlights", "Balayage", "Root Touch-Up", "Hair Trim", 
+            "Deep Conditioning Treatment", "Scalp Treatment", "Keratin Treatment", "Protein Treatment"
+        ];
+
+        services.forEach(service => {
+            const option = document.createElement('option');
+            option.value = service;
+            option.textContent = service;
+            serviceSelect.appendChild(option);
+        });
+
+        stylistSelect.innerHTML = '<option selected disabled>Choose a stylist</option>'; // Reset stylist options
+        stylistSelect.disabled = true; // Disable stylist select until service is selected
+        timeInput.innerHTML = '<option selected disabled>Select Time</option>'; // Reset time options
+        timeInput.disabled = true; // Disable time select until stylist is selected
+
         updateAvailableTimes();
     });
 
