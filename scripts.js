@@ -17,120 +17,150 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function() {
     const serviceSelect = document.getElementById('service');
     const stylistSelect = document.getElementById('stylist');
-    const dateTimeInput = document.getElementById('datetime');
-    const submitButton = document.getElementById('submitButton');
-
-    dateTimeInput.addEventListener('change', function() {
-        const selectedDateTime = dateTimeInput.value;
-
-        if (selectedDateTime) {
-            serviceSelect.disabled = false;
-            stylistSelect.disabled = false;
-        } else {
-            serviceSelect.disabled = true;
-            stylistSelect.disabled = true;
-        }
-    });
+    const dateInput = document.getElementById('date');
+    const timeInput = document.getElementById('time');
 
     serviceSelect.addEventListener('change', function() {
         const selectedService = serviceSelect.value;
+        stylistSelect.innerHTML = '';
+        stylistSelect.disabled = true;
+        timeInput.disabled = true;
 
-        if (selectedService) {
-            stylistSelect.innerHTML = getStylistOptions(selectedService);
-            stylistSelect.disabled = false;
-        } else {
-            stylistSelect.innerHTML = '';
-            stylistSelect.disabled = true;
-        }
-    });
-
-    submitButton.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent form submission
-
-        const selectedDateTime = dateTimeInput.value;
-        const selectedService = serviceSelect.value;
-        const selectedStylist = stylistSelect.value;
-
-        if (selectedDateTime && selectedService && selectedStylist) {
-            // Submit the form or proceed with the next step
-            alert('Booking confirmed!');
-        } else {
-            alert('Please fill in all required fields.');
-        }
-    });
-
-    function getStylistOptions(service) {
-        switch (service) {
+        switch (selectedService) {
             case 'Full Colour':
-                return `
+                stylistSelect.innerHTML = `
                     <option value="Chloe">Chloe</option>
                     <option value="Ava">Ava</option>
                     <option value="Emma">Emma</option>
                 `;
+                break;
             case 'Ombre':
-                return `
+                stylistSelect.innerHTML = `
                     <option value="Bella">Bella</option>
                     <option value="Fiona">Fiona</option>
                 `;
+                break;
             case 'Regular Haircut':
-                return `
+                stylistSelect.innerHTML = `
                     <option value="Ava">Ava</option>
                     <option value="Chloe">Chloe</option>
                     <option value="Daisy">Daisy</option>
                     <option value="Mira">Mira</option>
                 `;
+                break;
             case 'Curly Cut':
-                return `
+                stylistSelect.innerHTML = `
                     <option value="Chloe">Chloe</option>
                     <option value="Mira">Mira</option>
                 `;
+                break;
             case 'Wash and Style':
-                return `
+                stylistSelect.innerHTML = `
                     <option value="Ava">Ava</option>
                     <option value="Chloe">Chloe</option>
                     <option value="Mira">Mira</option>
                 `;
+                break;
             case 'Partial Highlights':
-                return `
+                stylistSelect.innerHTML = `
                     <option value="Bella">Bella</option>
                     <option value="Daisy">Daisy</option>
                 `;
+                break;
             case 'Balayage':
-                return `
+                stylistSelect.innerHTML = `
                     <option value="Chloe">Chloe</option>
                     <option value="Fiona">Fiona</option>
                 `;
+                break;
             case 'Root Touch-Up':
-                return `
+                stylistSelect.innerHTML = `
                     <option value="Chloe">Chloe</option>
                 `;
+                break;
             case 'Hair Trim':
-                return `
+                stylistSelect.innerHTML = `
                     <option value="Bella">Bella</option>
                     <option value="Daisy">Daisy</option>
                     <option value="Fiona">Fiona</option>
                 `;
+                break;
             case 'Deep Conditioning Treatment':
-                return `
+                stylistSelect.innerHTML = `
                     <option value="Bella">Bella</option>
                 `;
+                break;
             case 'Scalp Treatment':
-                return `
+                stylistSelect.innerHTML = `
                     <option value="Bella">Bella</option>
                     <option value="Fiona">Fiona</option>
                 `;
+                break;
             case 'Keratin Treatment':
-                return `
+                stylistSelect.innerHTML = `
                     <option value="Mira">Mira</option>
                 `;
+                break;
             case 'Protein Treatment':
-                return `
+                stylistSelect.innerHTML = `
                     <option value="Daisy">Daisy</option>
                     <option value="Mira">Mira</option>
                 `;
+                break;
             // Add more cases for other services
             default:
-                return '';
+                stylistSelect.innerHTML = '';
+        }        
+        stylistSelect.disabled = false;
+    });
+
+    stylistSelect.addEventListener('change', function() {
+        const selectedStylist = stylistSelect.value;
+        timeInput.disabled = true;
+    
+        // Validate booking time based on selected stylist and day
+        if (selectedStylist && dateInput.value) {
+            const selectedDate = new Date(dateInput.value);
+            const dayOfWeek = selectedDate.getDay();
+            const hours = selectedDate.getHours();
+    
+            let minTime = 9; // Default minimum time for all stylists
+            let maxTime = 17; // Default maximum time for all stylists
+    
+            // Update minTime and maxTime based on the selected stylist
+            switch (selectedStylist) {
+                case 'Chloe':
+                    // Chloe works from 10am to 6pm
+                    minTime = 10;
+                    maxTime = 18;
+                    break;
+                case 'Ava':
+                    // Ava works from 9am to 5pm
+                    minTime = 9;
+                    maxTime = 17;
+                    break;
+                case 'Emma':
+                    // Emma works from 11am to 7pm
+                    minTime = 11;
+                    maxTime = 19;
+                    break;
+                // Add more cases for other stylists
+                default:
+                    break;
+            }
+    
+            // Check if the selected time is within the working hours of the stylist
+            if ((dayOfWeek >= 1 && dayOfWeek <= 5 && hours >= minTime && hours <= maxTime) ||   // Monday to Friday
+                (dayOfWeek === 6 && hours >= 10 && hours <= 15)) {                              // Saturday
+                timeInput.disabled = false;
+                timeInput.setAttribute('min', `${minTime.toString().padStart(2, '0')}:00`);
+                timeInput.setAttribute('max', `${maxTime.toString().padStart(2, '0')}:00`);
+            }
         }
-    }
+    });
+    
+    dateInput.addEventListener('change', function() {
+        // Trigger stylist select change to update available times based on the selected date
+        stylistSelect.dispatchEvent(new Event('change'));
+    });
 });
