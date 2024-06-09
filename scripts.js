@@ -250,9 +250,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!mainPersonEmail || !groupSize || !groupDate) {
             document.getElementById('groupBookingMessage').innerHTML = '<p class="text-danger">Please fill out all fields.</p>';
         } else {
-            submitButton.innerText = 'Submitted';
+            submitButton.innerText = 'Submitted. A stylist will be in contact with you shortly for further details.';
             submitButton.disabled = true;
-            document.getElementById('groupBookingMessage').innerHTML = '<p class="text-success">A stylist will be in contact with you shortly for further details.</p>';
         }
     });
 });
