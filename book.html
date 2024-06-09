@@ -73,6 +73,27 @@
         <div class="card mb-3 card-light-grey p-3">
             <h2>Book a Group Appointment</h2>
             <p>To book a group appointment, contact us at <a href="mailto:cocohair@gmail.com">cocohair@gmail.com</a>. This is the simplest way to ensure all needs are met!</p>
+            <div id="card2" style="display: none;">
+                <div class="card mb-3 card-light-grey p-3">
+                    <form id="personalDetailsForm">
+                        <!-- Form fields for email, name, phone number -->
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <button type="button" id="backToAppointmentDetails" class="btn btn-secondary me-2">Back</button>
+                        <button type="button" id="submitPersonalDetails" class="btn btn-primary">Submit Personal Details</button>
+                    </form>
+                </div>
+            </div>
         </div>
 
         <!-- Card 1: Appointment Details -->
