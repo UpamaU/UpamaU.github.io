@@ -46,23 +46,29 @@
     <main class="container mt-5">
         <h2>Book Now</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
-        <form>
+        <form id="bookingForm">
             <div class="mb-3">
                 <label for="date" class="form-label">Select Date</label>
-                <input type="date" class="form-control" id="date">
+                <input type="date" class="form-control" id="date" required>
             </div>
             <div class="mb-3">
                 <label for="service" class="form-label">Select Service</label>
-                <select class="form-select" id="service">
-                    <option selected>Select Service</option>
-                    <option value="1">Service 1</option>
-                    <option value="2">Service 2</option>
-                    <option value="3">Service 3</option>
+                <select class="form-select" id="service" required>
+                    <option selected disabled>Select Service</option>
+                    <option value="Full Colour">Full Colour</option>
+                    <option value="Ombre">Ombre</option>
+                    <!-- Add more options for other services -->
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="stylist" class="form-label">Select Stylist</label>
+                <select class="form-select" id="stylist" required disabled>
+                    <option selected disabled>Select Stylist</option>
                 </select>
             </div>
             <div class="mb-3">
                 <label for="time" class="form-label">Select Time</label>
-                <input type="time" class="form-control" id="time">
+                <input type="time" class="form-control" id="time" required disabled>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
