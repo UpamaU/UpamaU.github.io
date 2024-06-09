@@ -133,6 +133,9 @@ document.addEventListener('DOMContentLoaded', function() {
             availableTimes = generateTimeOptions(9, 17);
         } else if (dayOfWeek === 6) { // Saturday: 10am to 3pm
             availableTimes = generateTimeOptions(10, 15);
+        } else { // Sunday: closed
+            availableTimes = '<option value="" disabled>No available times</option>';
+            timeInput.disabled = true;
         }
 
         timeInput.innerHTML = availableTimes;
