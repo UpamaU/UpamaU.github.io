@@ -238,8 +238,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const groupBookingForm = document.getElementById('groupBookingForm');
     const submitButton = document.getElementById('submitButton3');
     const card5 = document.getElementById('card5');
-    card5.style.display = 'block';
 
+    // Display card5 initially
+    card5.style.display = 'block';
 
     groupBookingForm.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent form submission
@@ -255,3 +256,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
