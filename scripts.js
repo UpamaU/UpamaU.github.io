@@ -117,48 +117,22 @@ document.addEventListener('DOMContentLoaded', function() {
     stylistSelect.addEventListener('change', function() {
         const selectedStylist = stylistSelect.value;
         timeInput.disabled = true;
-    
+
         // Validate booking time based on selected stylist and day
         if (selectedStylist && dateInput.value) {
             const selectedDate = new Date(dateInput.value);
             const dayOfWeek = selectedDate.getDay();
             const hours = selectedDate.getHours();
-    
-            let minTime = 9; // Default minimum time for all stylists
-            let maxTime = 17; // Default maximum time for all stylists
-    
-            // Update minTime and maxTime based on the selected stylist
-            switch (selectedStylist) {
-                case 'Chloe':
-                    // Chloe works from 10am to 6pm
-                    minTime = 10;
-                    maxTime = 18;
-                    break;
-                case 'Ava':
-                    // Ava works from 9am to 5pm
-                    minTime = 9;
-                    maxTime = 17;
-                    break;
-                case 'Emma':
-                    // Emma works from 11am to 7pm
-                    minTime = 11;
-                    maxTime = 19;
-                    break;
-                // Add more cases for other stylists
-                default:
-                    break;
-            }
-    
-            // Check if the selected time is within the working hours of the stylist
-            if ((dayOfWeek >= 1 && dayOfWeek <= 5 && hours >= minTime && hours <= maxTime) ||   // Monday to Friday
-                (dayOfWeek === 6 && hours >= 10 && hours <= 15)) {                              // Saturday
+
+            if ((dayOfWeek >= 1 && dayOfWeek <= 5 && hours >= 9 && hours <= 16) ||   // Monday to Friday: 9am to 5pm
+                (dayOfWeek === 6 && hours >= 10 && hours <= 14)) {                  // Saturday: 10am to 3pm
                 timeInput.disabled = false;
-                timeInput.setAttribute('min', `${minTime.toString().padStart(2, '0')}:00`);
-                timeInput.setAttribute('max', `${maxTime.toString().padStart(2, '0')}:00`);
+                timeInput.setAttribute('min', '09:00');
+                timeInput.setAttribute('max', '17:00');
             }
         }
     });
-    
+
     dateInput.addEventListener('change', function() {
         // Trigger stylist select change to update available times based on the selected date
         stylistSelect.dispatchEvent(new Event('change'));
