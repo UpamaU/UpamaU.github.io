@@ -219,9 +219,14 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     event.preventDefault();
     var emailInput = document.getElementById('email');
     var messageDiv = document.getElementById('signupMessage');
+    var submitButton = document.getElementById('submitButton');
     if (emailInput.value.trim() === '') {
         messageDiv.innerHTML = '<p class="text-danger">Please enter your email address.</p>';
     } else {
-        messageDiv.innerHTML = '<p class="text-success">Email has been sent for sign up. Come to our salon to enjoy 5% off all your visits.</p>';
+        if (this.checkValidity()) {
+            messageDiv.innerHTML = '<p class="text-success">Email has been sent for sign up. Come to our salon to enjoy 5% off all your visits.</p>';
+            submitButton.innerText = 'Submitted';
+            submitButton.disabled = true; // Disable button to prevent multiple submissions
+        }
     }
 });
