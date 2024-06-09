@@ -129,9 +129,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         let availableTimes = '';
 
-        if (dayOfWeek >= 1 && dayOfWeek <= 6) { // Monday to Saturday: 9am to 5pm
+        if (dayOfWeek >= 0 && dayOfWeek < 6) { // Monday to Saturday: 9am to 5pm
             availableTimes = generateTimeOptions(9, 17);
-        } else if (dayOfWeek === 0) { // Sunday: closed
+        } else if (dayOfWeek === 6) { // Sunday: closed
             availableTimes = ''; // No available times
             timeInput.disabled = true;
         }
