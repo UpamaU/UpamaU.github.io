@@ -44,7 +44,6 @@ img {
 .navbar-dark .nav-link,
 .navbar-light .nav-link {
     text-align: center;
-    color: #000000;
 }
 
 .navbar-nav {
@@ -54,13 +53,11 @@ img {
     width: 100%;
     margin: 0;
     padding: 0;
-    color: #000000;
 }
 
 .nav-item {
     flex: 1; /* Equal spacing for all items */
     text-align: center;
-    color: #000000;
 }
 
 /* Centering the navbar brand */
@@ -114,4 +111,7 @@ img {
 
 .custom-card-writing{
     color: white !important;
+}
+.nav-link{
+    color: #000000;
 }
