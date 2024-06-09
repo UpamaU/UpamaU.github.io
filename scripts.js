@@ -234,65 +234,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('signupForm');
-    const submitButton = document.getElementById('submitGroupBooking');
-
-    form.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent form submission
-
-        if (form.checkValidity()) {
-            // Change button text to "Submitted"
-            submitButton.innerText = 'Submitted';
-            submitButton.disabled = true; // Disable button to prevent multiple submissions
-        } 
-    });
-
-    const groupBookingBox = document.getElementById('groupBookingBox');
+document.addEventListener('DOMContentLoaded', function() {
     const groupBookingForm = document.getElementById('groupBookingForm');
-    const bookingMessage = document.getElementById('bookingMessage');
 
-    groupBookingBox.addEventListener('click', function () {
-        groupBookingForm.style.display = 'block';
-        groupBookingBox.style.display = 'none';
-    });
-
-    groupBookingForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-        
-        const mainEmail = document.getElementById('mainEmail').value;
-        const groupSize = document.getElementById('groupSize').value;
+    groupBookingForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+        const mainPersonEmail = document.getElementById('mainPersonEmail').value.trim();
+        const groupSize = parseInt(document.getElementById('groupSize').value);
         const groupDate = document.getElementById('groupDate').value;
 
-        if (!validateEmail(mainEmail)) {
-            showMessage('Please enter a valid email address.', 'danger');
-            return;
+        if (!mainPersonEmail || !groupSize || !groupDate) {
+            document.getElementById('groupBookingMessage').innerHTML = '<p class="text-danger">Please fill out all fields.</p>';
+        } else {
+            document.getElementById('groupBookingMessage').innerHTML = '<p class="text-success">A stylist will be in contact with you shortly for further details.</p>';
         }
-
-        if (groupSize <= 0) {
-            showMessage('Please enter a valid group size.', 'danger');
-            return;
-        }
-
-        showMessage('A stylist will be in contact with you shortly for further details.', 'success');
-        groupBookingForm.reset();
-        groupBookingForm.style.display = 'none';
-        groupBookingBox.style.display = 'block';
     });
-
-    function validateEmail(email) {
-        const re = /\S+@\S+\.\S+/;
-        return re.test(email);
-    }
-
-    function showMessage(message, type) {
-        const div = document.createElement('div');
-        div.className = `alert alert-${type}`;
-        div.appendChild(document.createTextNode(message));
-        bookingMessage.appendChild(div);
-
-        setTimeout(function () {
-            div.remove();
-        }, 5000);
-    }
 });
