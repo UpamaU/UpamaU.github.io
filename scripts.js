@@ -110,31 +110,41 @@ document.addEventListener('DOMContentLoaded', function() {
             // Add more cases for other services
             default:
                 stylistSelect.innerHTML = '';
-        }        
+        }
         stylistSelect.disabled = false;
     });
 
     stylistSelect.addEventListener('change', function() {
-        const selectedStylist = stylistSelect.value;
-        timeInput.disabled = true;
-
-        // Validate booking time based on selected stylist and day
-        if (selectedStylist && dateInput.value) {
-            const selectedDate = new Date(dateInput.value);
-            const dayOfWeek = selectedDate.getDay();
-            const hours = selectedDate.getHours();
-
-            if ((dayOfWeek >= 1 && dayOfWeek <= 5 && hours >= 9 && hours <= 16) ||   // Monday to Friday: 9am to 5pm
-                (dayOfWeek === 6 && hours >= 10 && hours <= 14)) {                  // Saturday: 10am to 3pm
-                timeInput.disabled = false;
-                timeInput.setAttribute('min', '09:00');
-                timeInput.setAttribute('max', '17:00');
-            }
-        }
+        timeInput.disabled = false;
+        updateAvailableTimes();
     });
 
     dateInput.addEventListener('change', function() {
-        // Trigger stylist select change to update available times based on the selected date
-        stylistSelect.dispatchEvent(new Event('change'));
+        updateAvailableTimes();
     });
+
+    function updateAvailableTimes() {
+        const selectedDate = new Date(dateInput.value);
+        const dayOfWeek = selectedDate.getDay();
+
+        let availableTimes = '';
+
+        if (dayOfWeek >= 1 && dayOfWeek <= 5) { // Monday to Friday: 9am to 5pm
+            availableTimes = generateTimeOptions(9, 17);
+        } else if (dayOfWeek === 6) { // Saturday: 10am to 3pm
+            availableTimes = generateTimeOptions(10, 15);
+        }
+
+        timeInput.innerHTML = availableTimes;
+    }
+
+    function generateTimeOptions(startHour, endHour) {
+        let options = '';
+        for (let hour = startHour; hour < endHour; hour++) {
+            options += `<option value="${hour}:00">${hour}:00</option>`;
+            options += `<option value="${hour}:30">${hour}:30</option>`;
+        }
+        options += `<option value="${endHour}:00">${endHour}:00</option>`;
+        return options;
+    }
 });
