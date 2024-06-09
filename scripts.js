@@ -231,7 +231,6 @@ document.addEventListener('DOMContentLoaded', function () {
             // Change button text to "Submitted"
             submitButton.innerText = 'Submitted';
             submitButton.disabled = true; // Disable button to prevent multiple submissions
-            messageDiv.innerHTML = '<p class="text-success">Email has been sent for sign up. Come to our salon to enjoy 5% off all your visits.</p>';
         } else {
             messageDiv.innerHTML = '<p class="text-danger">Please fill out the form correctly.</p>';
         }
