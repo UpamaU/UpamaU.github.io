@@ -17,6 +17,17 @@
             background-color: #3a3a3a; /* Dark grey background */
             color: white;
         }
+
+        #groupBookingBox {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        #groupBookingForm {
+            display: none;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -141,8 +152,31 @@
                 <p>Your Appointment Request has been sent. An email with your appointment details has been sent to your email. Please confirm your appointment through that email within the next hour.</p>
             </div>
         </div>
-    </main>
 
+        <!-- Group Booking Box -->
+        <div id="groupBookingBox" class="card mb-3 card-light-grey p-3">
+            <h4>Book a Group Appointment</h4>
+        </div>
+
+        <!-- Group Booking Form -->
+        <form id="groupBookingForm" class="card mb-3 card-light-grey p-3" novalidate>
+            <div class="form-group mb-3">
+                <label for="mainEmail" class="form-label">Main Person's Email</label>
+                <input type="email" class="form-control" id="mainEmail" required>
+            </div>
+            <div class="form-group mb-3">
+                <label for="groupSize" class="form-label">Number of People</label>
+                <input type="number" class="form-control" id="groupSize" required min="1">
+            </div>
+            <div class="form-group mb-3">
+                <label for="date" class="form-label">Preferred Date</label>
+                <input type="date" class="form-control" id="groupDate" required>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submitGroupBooking">Submit</button>
+        </form>
+
+        <div id="bookingMessage" class="mt-3"></div>
+    </main>
     <footer class="text-white text-center footer-colour py-3">
         <p>&copy; 2024 Coco Hair Salon. All rights reserved.</p>
     </footer>
