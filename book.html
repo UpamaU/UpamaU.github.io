@@ -49,7 +49,7 @@
             </ul>
         </div>
     </nav>
-
+    <!-- Main content -->
     <main class="container mt-5">
         <h1>Book Now</h1>
         <div class="card mb-3 card-light-grey p-3">
@@ -57,46 +57,87 @@
             <p>*Payment not accepted before appointment as prices can vary depending on many factors including hair length, texture, level of Stylist, and/or creative process.</p>
             <p>*More than one service can be done, discuss with your stylist at the time of your appointment.</p>
         </div>
+        <!-- Card 1: Appointment Details -->
+        <div id="card1">
+            <h1>Book Now</h1>
+            <div class="card mb-3 card-light-grey p-3">
+                <form id="bookingForm">
+                    <div class="mb-3">
+                        <label for="date" class="form-label">Select Date</label>
+                        <input type="date" class="form-control" id="date" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="service" class="form-label">Select Service</label>
+                        <select class="form-select" id="service" required>
+                            <option selected disabled>Select Service</option>
+                            <option value="Full Colour">Full Colour</option>
+                            <option value="Ombre">Ombre</option>
+                            <option value="Regular Haircut">Regular Haircut</option>
+                            <option value="Curly Cut">Curly Cut</option>
+                            <option value="Wash and Style">Wash and Style</option>
+                            <option value="Partial Highlights">Partial Highlights</option>
+                            <option value="Balayage">Balayage</option>
+                            <option value="Root Touch-Up">Root Touch-Up</option>
+                            <option value="Hair Trim">Hair Trim</option>
+                            <option value="Deep Conditioning Treatment">Deep Conditioning Treatment</option>
+                            <option value="Scalp Treatment">Scalp Treatment</option>
+                            <option value="Keratin Treatment">Keratin Treatment</option>
+                            <option value="Protein Treatment">Protein Treatment</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="stylist" class="form-label">Select Stylist</label>
+                        <select class="form-select" id="stylist" required disabled>
+                            <option selected disabled>Select Stylist</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="time" class="form-label">Select Time</label>
+                        <select class="form-select" id="time" disabled>
+                            <option value="">Select Time</option>
+                        </select>
+                    </div>
+                    <button type="button" id="submitAppointmentDetails" class="btn btn-primary">Submit Appointment Details</button>
+                </form>
+            </div>
+        </div>
 
-        <div class="card mb-3 card-dark-grey p-3">
-            <form id="bookingForm">
-                <div class="mb-3">
-                    <label for="date" class="form-label">Select Date</label>
-                    <input type="date" class="form-control" id="date" required>
-                </div>
-                <div class="mb-3">
-                    <label for="service" class="form-label">Select Service</label>
-                    <select class="form-select" id="service" required>
-                        <option selected disabled>Select Service</option>
-                        <option value="Full Colour">Full Colour</option>
-                        <option value="Ombre">Ombre</option>
-                        <option value="Regular Haircut">Regular Haircut</option>
-                        <option value="Curly Cut">Curly Cut</option>
-                        <option value="Wash and Style">Wash and Style</option>
-                        <option value="Partial Highlights">Partial Highlights</option>
-                        <option value="Balayage">Balayage</option>
-                        <option value="Root Touch-Up">Root Touch-Up</option>
-                        <option value="Hair Trim">Hair Trim</option>
-                        <option value="Deep Conditioning Treatment">Deep Conditioning Treatment</option>
-                        <option value="Scalp Treatment">Scalp Treatment</option>
-                        <option value="Keratin Treatment">Keratin Treatment</option>
-                        <option value="Protein Treatment">Protein Treatment</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="stylist" class="form-label">Select Stylist</label>
-                    <select class="form-select" id="stylist" required disabled>
-                        <option selected disabled>Select Stylist</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="time" class="form-label">Select Time</label>
-                    <select class="form-select" id="time" disabled>
-                        <option value="">Select Time</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+        <!-- Card 2: Personal Details -->
+        <div id="card2" style="display: none;">
+            <div class="card mb-3 card-light-grey p-3">
+                <form id="personalDetailsForm">
+                    <!-- Form fields for email, name, phone number -->
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" required>
+                    </div>
+                    <button type="button" id="submitPersonalDetails" class="btn btn-primary">Submit Personal Details</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Card 3: Summary -->
+        <div id="card3" style="display: none;">
+            <div class="card mb-3 card-light-grey p-3">
+                <!-- Display summary of appointment details and personal details -->
+                <!-- Submit button -->
+                <button type="button" id="confirmAppointmentRequest" class="btn btn-primary">Confirm Appointment Request</button>
+            </div>
+        </div>
+
+        <!-- Card 4: Confirmation -->
+        <div id="card4" style="display: none;">
+            <div class="card mb-3 card-light-grey p-3">
+                <p>Your Appointment Request has been sent. An email with your appointment details has been sent to your email. Please confirm your appointment through that email within the next hour.</p>
+            </div>
         </div>
     </main>
 
