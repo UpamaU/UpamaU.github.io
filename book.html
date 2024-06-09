@@ -58,7 +58,7 @@
             <p>*More than one service can be done, discuss with your stylist at the time of your appointment.</p>
         </div>
 
-        <div class="card mb-3 card-dark-grey p-3">
+        <div class="card mb-3 card-dark-grey p-3" id="appointmentDetails">
             <form id="bookingForm">
                 <div class="mb-3">
                     <label for="date" class="form-label">Select Date</label>
@@ -95,11 +95,39 @@
                         <option value="">Select Time</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-primary" id="submitAppointment">Submit</button>
             </form>
         </div>
-    </main>
 
+        <div class="card mb-3 card-dark-grey p-3" id="userDetails" style="display: none;">
+            <form id="userDetailsForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" required>
+                </div>
+                <button type="button" class="btn btn-primary" id="submitUserDetails">Next</button>
+            </form>
+        </div>
+
+        <div class="card mb-3 card-dark-grey p-3" id="appointmentSummary" style="display: none;">
+            <h2>Appointment Summary</h2>
+            <p>Date: <span id="summaryDate"></span></p>
+            <p>Service: <span id="summaryService"></span></p>
+            <p>Stylist: <span id="summaryStylist"></span></p>
+            <p>Name: <span id="summaryName"></span></p>
+            <p>Email: <span id="summaryEmail"></span></p>
+            <p>Phone Number: <span id="summaryPhone"></span></p>
+            <button type="button" class="btn btn-primary" id="confirmAppointment">Submit Appointment Request</button>
+        </div>
+    </main>
     <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2024 Coco Hair Salon. All rights reserved.</p>
     </footer>
