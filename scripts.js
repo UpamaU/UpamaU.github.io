@@ -129,13 +129,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         let availableTimes = '';
 
-        if (dayOfWeek >= 1 && dayOfWeek <= 5) { // Monday to Friday: 9am to 5pm
+        if (dayOfWeek >= 1 && dayOfWeek <= 6) { // Monday to Saturday: 9am to 5pm
             availableTimes = generateTimeOptions(9, 17);
-        } else if (dayOfWeek === 6) { // Saturday: 9am to 5pm (Monday-Friday time)
-            availableTimes = generateTimeOptions(9, 17);
-        } else if (dayOfWeek === 0) { // Sunday: 10am to 3pm (Saturday time)
-            availableTimes = generateTimeOptions(10, 15);
-        } else { // Closed
+        } else if (dayOfWeek === 0) { // Sunday: closed
+            availableTimes = ''; // No available times
             timeInput.disabled = true;
         }
 
