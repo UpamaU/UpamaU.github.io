@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const confirmAppointmentRequestBtn = document.getElementById('confirmAppointmentRequest');
 
     submitAppointmentDetailsBtn.addEventListener('click', function () {
-        // Check if all fields are filled before proceeding
+        // Check if all fields are filled before going on
         const date = document.getElementById('date').value;
         const service = document.getElementById('service').value;
         const stylist = document.getElementById('stylist').value;
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     submitPersonalDetailsBtn.addEventListener('click', function () {
-        // Check if all fields are filled before proceeding
+        // Check if all fields are filled before going on
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const phone = document.getElementById('phone').value;
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const messageDiv = document.getElementById('signupMessage');
 
     form.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent form submission
+        event.preventDefault(); // Stop form submission
 
         if (form.checkValidity()) {
             // Change button text to "Submitted"
@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     groupBookingForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent form submission
+        event.preventDefault(); // Stop form submission
         const mainPersonEmail = document.getElementById('mainPersonEmail').value.trim();
         const groupSize = parseInt(document.getElementById('groupSize').value);
         const groupDate = document.getElementById('groupDate').value;

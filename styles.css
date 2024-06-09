@@ -36,7 +36,7 @@ img {
 }
 
 .custom-link {
-    color: #ffffff; /* White text color */
+    color: #ffffff; /* Whte text color */
     font-size: 20px;
 }
 
@@ -49,7 +49,7 @@ img {
 .navbar-nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; /* Ensure equal spacing */
+    justify-content: space-between;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -76,7 +76,7 @@ img {
     
 }
 
-/* Media queries to adjust the font size based on screen width */
+/* Media queries for adjusting the font size based on screen width */
 @media (max-width: 768px) {
     .navbar-primary .nav-link,
     .navbar-secondary .nav-link {
