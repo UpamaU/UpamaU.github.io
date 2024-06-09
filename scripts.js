@@ -156,6 +156,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const card2 = document.getElementById('card2');
     const card3 = document.getElementById('card3');
     const card4 = document.getElementById('card4');
+    const backToAppointmentDetailsBtn = document.getElementById('backToAppointmentDetails');
+    const backToPersonalDetailsBtn = document.getElementById('backToPersonalDetails');
 
     const submitAppointmentDetailsBtn = document.getElementById('submitAppointmentDetails');
     const submitPersonalDetailsBtn = document.getElementById('submitPersonalDetails');
