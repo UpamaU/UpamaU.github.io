@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function() {
     const groupBookingForm = document.getElementById('groupBookingForm');
     const submitButton = document.getElementById('submitButton3');
-    const card5 = document.getElementById('card5');
+    const card5 = document.getElementById('card5')
     card5.style.display = 'block';
 
 
@@ -250,7 +250,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!mainPersonEmail || !groupSize || !groupDate) {
             document.getElementById('groupBookingMessage').innerHTML = '<p class="text-danger">Please fill out all fields.</p>';
         } else {
-            submitButton.innerText = 'Submitted. A stylist will be in contact with you shortly for further details.';
+            submitButton.innerText = 'Submitted';
             submitButton.disabled = true;
             document.getElementById('groupBookingMessage').innerHTML = '<p class="text-success">A stylist will be in contact with you shortly for further details.</p>';
         }
