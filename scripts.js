@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     serviceSelect.addEventListener('change', function() {
         const selectedService = serviceSelect.value;
-        stylistSelect.innerHTML = '<option selected disabled>""</option>'; // Reset and add default option
+        stylistSelect.innerHTML = '<option selected disabled></option>'; // Reset and add default option
         stylistSelect.disabled = true;
         timeInput.disabled = true;
 
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
             // Add more cases for other services
             default:
-                stylistSelect.innerHTML = '<option selected disabled>Choose a stylist</option>';
+                stylistSelect.innerHTML = '<option selected disabled></option>';
         }
         stylistSelect.disabled = false;
     });
