@@ -58,6 +58,7 @@ img {
 .nav-item {
     flex: 1; /* Equal spacing for all items */
     text-align: center;
+    color: #000000;
 }
 
 /* Centering the navbar brand */
