@@ -162,12 +162,33 @@ document.addEventListener('DOMContentLoaded', function () {
     const confirmAppointmentRequestBtn = document.getElementById('confirmAppointmentRequest');
 
     submitAppointmentDetailsBtn.addEventListener('click', function () {
+        // Check if all fields are filled before proceeding
+        const date = document.getElementById('date').value;
+        const service = document.getElementById('service').value;
+        const stylist = document.getElementById('stylist').value;
+        const time = document.getElementById('time').value;
+        
+        if (!date || !service || !stylist || !time) {
+            alert('Please fill in all fields.');
+            return;
+        }
+
         // Hide card1 and show card2
         card1.style.display = 'none';
         card2.style.display = 'block';
     });
 
     submitPersonalDetailsBtn.addEventListener('click', function () {
+        // Check if all fields are filled before proceeding
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        
+        if (!name || !email || !phone) {
+            alert('Please fill in all fields.');
+            return;
+        }
+
         // Hide card2 and show card3
         card2.style.display = 'none';
         card3.style.display = 'block';
