@@ -44,6 +44,7 @@ img {
 .navbar-dark .nav-link,
 .navbar-light .nav-link {
     text-align: center;
+    color: #000000;
 }
 
 .navbar-nav {
@@ -53,6 +54,7 @@ img {
     width: 100%;
     margin: 0;
     padding: 0;
+    color: #000000;
 }
 
 .nav-item {
