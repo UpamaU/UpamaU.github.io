@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function() {
     const serviceSelect = document.getElementById('service');
     const stylistSelect = document.getElementById('stylist');
+    const dateInput = document.getElementById('date');
     const timeInput = document.getElementById('time');
 
     serviceSelect.addEventListener('change', function() {
@@ -49,11 +50,23 @@ document.addEventListener('DOMContentLoaded', function() {
         const selectedStylist = stylistSelect.value;
         timeInput.disabled = true;
 
-        // Example of validating a booking time (e.g., must be between 9:00 AM and 5:00 PM)
-        if (selectedStylist) {
-            timeInput.disabled = false;
-            timeInput.setAttribute('min', '09:00');
-            timeInput.setAttribute('max', '17:00');
+        // Validate booking time based on selected stylist and day
+        if (selectedStylist && dateInput.value) {
+            const selectedDate = new Date(dateInput.value);
+            const dayOfWeek = selectedDate.getDay();
+            const hours = selectedDate.getHours();
+
+            if ((dayOfWeek >= 1 && dayOfWeek <= 5 && hours >= 9 && hours <= 16) ||   // Monday to Friday: 9am to 5pm
+                (dayOfWeek === 6 && hours >= 10 && hours <= 14)) {                  // Saturday: 10am to 3pm
+                timeInput.disabled = false;
+                timeInput.setAttribute('min', '09:00');
+                timeInput.setAttribute('max', '17:00');
+            }
         }
+    });
+
+    dateInput.addEventListener('change', function() {
+        // Trigger stylist select change to update available times based on the selected date
+        stylistSelect.dispatchEvent(new Event('change'));
     });
 });
