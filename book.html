@@ -180,6 +180,28 @@
                 </div>
             </div>
         </div>
+        <div class="card mb-3 card-light-grey p-3">
+            <h2>Book a Group Appointment</h2>
+            <p>Input the main person's email, group size, and desired date below.</p>
+            <div id="card5" style="display: none;">
+                <form id="groupBookingForm">
+                    <div class="mb-3">
+                        <label for="mainPersonEmail" class="form-label">Main Person's Email</label>
+                        <input type="email" class="form-control" id="mainPersonEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="groupSize" class="form-label">Group Size</label>
+                        <input type="number" class="form-control" id="groupSize" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="groupDate" class="form-label">Desired Date</label>
+                        <input type="date" class="form-control" id="groupDate" required>
+                    </div>
+                    <div id="groupBookingMessage"></div>
+                    <button type="submit" class="btn btn-primary" id="submitButton3">Submit</button>
+                </form>
+            </div>
+        </div>
     </main>
     <footer class="text-white text-center footer-colour py-3">
         <p>&copy; 2024 Coco Hair Salon. All rights reserved.</p>
