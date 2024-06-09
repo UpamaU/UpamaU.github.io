@@ -74,6 +74,14 @@
             font-weight: bold; /* Bold text */
             margin-bottom: 10px; /* Spacing below title */
         }
+        .home-signcard{
+            background-color: #20583A; /* Light grey background */
+            color: #ffffff; /* Black text color */
+            border: 2px solid #000000;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
@@ -157,6 +165,24 @@
             </div>
         </div>
     </main>
+
+    <!-- Email Sign Up for Premium Account -->
+    <section class="container mt-5">
+        <div class="card home-signcard">
+            <div class="card-body">
+                <h2 class="home-card-title">Sign Up for a Premium Account</h2>
+                <p class="lead">Receive 5% off in store on all your visits.</p>
+                <form id="signupForm">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <div id="signupMessage" class="mt-3"></div>
+            </div>
+        </div>
+    </section>
 
     <footer class="text-white text-center footer-colour py-3">
         <p>&copy; 2024 Coco Hair Salon. All rights reserved.</p>

@@ -214,3 +214,14 @@ document.addEventListener('DOMContentLoaded', function () {
         card3.style.display = 'none';
     });
 });
+
+document.getElementById('signupForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var emailInput = document.getElementById('email');
+    var messageDiv = document.getElementById('signupMessage');
+    if (emailInput.value.trim() === '') {
+        messageDiv.innerHTML = '<p class="text-danger">Please enter your email address.</p>';
+    } else {
+        messageDiv.innerHTML = '<p class="text-success">Email has been sent for sign up. Come to our salon to enjoy 5% off all your visits.</p>';
+    }
+});
