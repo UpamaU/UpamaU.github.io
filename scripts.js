@@ -218,7 +218,6 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('signupForm');
     const submitButton = document.getElementById('submitButton2');
-    const messageDiv = document.getElementById('signupMessage');
 
     form.addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent form submission
@@ -227,7 +226,6 @@ document.addEventListener('DOMContentLoaded', function () {
             // Change button text to "Submitted"
             submitButton.innerText = 'Submitted';
             submitButton.disabled = true; // Disable button to prevent multiple submissions
-            messageDiv.innerHTML = '<p class="text-success">Email has been sent for sign up. Come to our salon to enjoy 5% off all your visits.</p>';
         } 
     });
 });
