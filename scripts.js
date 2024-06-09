@@ -22,26 +22,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     serviceSelect.addEventListener('change', function() {
         const selectedService = serviceSelect.value;
-        stylistSelect.innerHTML = '';
+        stylistSelect.innerHTML = '<option selected disabled>Choose a stylist</option>'; // Reset and add default option
         stylistSelect.disabled = true;
         timeInput.disabled = true;
 
         switch (selectedService) {
             case 'Full Colour':
-                stylistSelect.innerHTML = `
+                stylistSelect.innerHTML += `
                     <option value="Chloe">Chloe</option>
                     <option value="Ava">Ava</option>
                     <option value="Emma">Emma</option>
                 `;
                 break;
             case 'Ombre':
-                stylistSelect.innerHTML = `
+                stylistSelect.innerHTML += `
                     <option value="Bella">Bella</option>
                     <option value="Fiona">Fiona</option>
                 `;
                 break;
             case 'Regular Haircut':
-                stylistSelect.innerHTML = `
+                stylistSelect.innerHTML += `
                     <option value="Ava">Ava</option>
                     <option value="Chloe">Chloe</option>
                     <option value="Daisy">Daisy</option>
@@ -49,67 +49,67 @@ document.addEventListener('DOMContentLoaded', function() {
                 `;
                 break;
             case 'Curly Cut':
-                stylistSelect.innerHTML = `
+                stylistSelect.innerHTML += `
                     <option value="Chloe">Chloe</option>
                     <option value="Mira">Mira</option>
                 `;
                 break;
             case 'Wash and Style':
-                stylistSelect.innerHTML = `
+                stylistSelect.innerHTML += `
                     <option value="Ava">Ava</option>
                     <option value="Chloe">Chloe</option>
                     <option value="Mira">Mira</option>
                 `;
                 break;
             case 'Partial Highlights':
-                stylistSelect.innerHTML = `
+                stylistSelect.innerHTML += `
                     <option value="Bella">Bella</option>
                     <option value="Daisy">Daisy</option>
                 `;
                 break;
             case 'Balayage':
-                stylistSelect.innerHTML = `
+                stylistSelect.innerHTML += `
                     <option value="Chloe">Chloe</option>
                     <option value="Fiona">Fiona</option>
                 `;
                 break;
             case 'Root Touch-Up':
-                stylistSelect.innerHTML = `
+                stylistSelect.innerHTML += `
                     <option value="Chloe">Chloe</option>
                 `;
                 break;
             case 'Hair Trim':
-                stylistSelect.innerHTML = `
+                stylistSelect.innerHTML += `
                     <option value="Bella">Bella</option>
                     <option value="Daisy">Daisy</option>
                     <option value="Fiona">Fiona</option>
                 `;
                 break;
             case 'Deep Conditioning Treatment':
-                stylistSelect.innerHTML = `
+                stylistSelect.innerHTML += `
                     <option value="Bella">Bella</option>
                 `;
                 break;
             case 'Scalp Treatment':
-                stylistSelect.innerHTML = `
+                stylistSelect.innerHTML += `
                     <option value="Bella">Bella</option>
                     <option value="Fiona">Fiona</option>
                 `;
                 break;
             case 'Keratin Treatment':
-                stylistSelect.innerHTML = `
+                stylistSelect.innerHTML += `
                     <option value="Mira">Mira</option>
                 `;
                 break;
             case 'Protein Treatment':
-                stylistSelect.innerHTML = `
+                stylistSelect.innerHTML += `
                     <option value="Daisy">Daisy</option>
                     <option value="Mira">Mira</option>
                 `;
                 break;
             // Add more cases for other services
             default:
-                stylistSelect.innerHTML = '';
+                stylistSelect.innerHTML = '<option selected disabled>Choose a stylist</option>';
         }
         stylistSelect.disabled = false;
     });
@@ -131,9 +131,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (dayOfWeek >= 1 && dayOfWeek <= 5) { // Monday to Friday: 9am to 5pm
             availableTimes = generateTimeOptions(9, 17);
-        } else if (dayOfWeek === 6) { // Saturday: 10am to 3pm
+        } else if (dayOfWeek === 6) { // Saturday: 9am to 5pm (Monday-Friday time)
+            availableTimes = generateTimeOptions(9, 17);
+        } else if (dayOfWeek === 0) { // Sunday: 10am to 3pm (Saturday time)
             availableTimes = generateTimeOptions(10, 15);
-        } else { // Sunday: closed
+        } else { // Closed
             timeInput.disabled = true;
         }
 
