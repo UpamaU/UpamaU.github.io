@@ -157,8 +157,7 @@
         <div class="card mb-3 card-light-grey p-3">
             <h2>Book a Group Appointment</h2>
             <p>Input the main person's email, group size, and desired date below.</p>
-            <div id="groupBookingForm" class="d-none">
-                <form>
+                <form id="groupBookingForm">
                     <div class="mb-3">
                         <label for="mainPersonEmail" class="form-label">Main Person's Email</label>
                         <input type="email" class="form-control" id="mainPersonEmail" required>
@@ -172,7 +171,7 @@
                         <input type="date" class="form-control" id="groupDate" required>
                     </div>
                     <div id="groupBookingMessage"></div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary" id="submitButton3">Submit</button>
                 </form>
             </div>
         </div>
