@@ -215,18 +215,25 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-document.getElementById('signupForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    var emailInput = document.getElementById('email');
-    var messageDiv = document.getElementById('signupMessage');
-    var submitButton = document.getElementById('submitButton');
-    if (emailInput.value.trim() === '') {
-        messageDiv.innerHTML = '<p class="text-danger">Please enter your email address.</p>';
-    } else {
-        if (this.checkValidity()) {
-            messageDiv.innerHTML = '<p class="text-success">Email has been sent for sign up. Come to our salon to enjoy 5% off all your visits.</p>';
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('signupForm');
+    const submitButton = document.getElementById('submitButton');
+    const messageDiv = document.getElementById('signupMessage');
+    const emailInput = document.getElementById('email');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Validate form fields
+        if (emailInput.value.trim() === '') {
+            messageDiv.innerHTML = '<p class="text-danger">Please enter your email address.</p>';
+        } else if (form.checkValidity()) {
+            // Change button text to "Submitted"
             submitButton.innerText = 'Submitted';
             submitButton.disabled = true; // Disable button to prevent multiple submissions
+            messageDiv.innerHTML = '<p class="text-success">Email has been sent for sign up. Come to our salon to enjoy 5% off all your visits.</p>';
+        } else {
+            messageDiv.innerHTML = '<p class="text-danger">Please fill out the form correctly.</p>';
         }
-    }
+    });
 });
