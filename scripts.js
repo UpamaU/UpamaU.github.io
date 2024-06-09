@@ -199,4 +199,16 @@ document.addEventListener('DOMContentLoaded', function () {
         card3.style.display = 'none';
         card4.style.display = 'block';
     });
+    
+    backToAppointmentDetailsBtn.addEventListener('click', function () {
+        // Show card1 and hide card2
+        card1.style.display = 'block';
+        card2.style.display = 'none';
+    });
+
+    backToPersonalDetailsBtn.addEventListener('click', function () {
+        // Show card2 and hide card3
+        card2.style.display = 'block';
+        card3.style.display = 'none';
+    });
 });
