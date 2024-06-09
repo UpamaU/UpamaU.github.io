@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('signupForm');
-    const submitButton = document.getElementById('submitButton');
+    const submitButton = document.getElementById('submitButton2');
     const messageDiv = document.getElementById('signupMessage');
     const emailInput = document.getElementById('email');
 
