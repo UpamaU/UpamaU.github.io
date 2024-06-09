@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     dateInput.addEventListener('change', function() {
-        serviceSelect.innerHTML = '<option selected disabled>Select Service</option>'; // Reset service options
+        serviceSelect.innerHTML = '<option selected disabled></option>'; // Reset service options
         // Re-add service options
         const services = [
             "Full Colour", "Ombre", "Regular Haircut", "Curly Cut", "Wash and Style",
