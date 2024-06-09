@@ -10,6 +10,13 @@
         .custom-title {
             color: white !important;
         }
+        .card-light-grey {
+            background-color: #f8f9fa; /* Light grey background */
+        }
+        .card-dark-grey {
+            background-color: #343a40; /* Dark grey background */
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -44,56 +51,58 @@
     </nav>
 
     <main class="container mt-5">
-        <h2>Book Now</h2>
-        <p>Schedule your appointment below to get started!</p>
-        <p>*Payment not accepted before appointment as prices can vary depending on many factors including hair length, texture, level of Stylist, and/or creative process.</p>
-        <p>*More than one service can be done, discuss with your stylist at the time of your appointment.</p>
-        <form id="bookingForm">
-            <div class="mb-3">
-                <label for="date" class="form-label">Select Date</label>
-                <input type="date" class="form-control" id="date" required>
-            </div>
-            <div class="mb-3">
-                <label for="service" class="form-label">Select Service</label>
-                <select class="form-select" id="service" required>
-                    <option selected disabled>Select Service</option>
-                    <option value="Full Colour">Full Colour</option>
-                    <option value="Ombre">Ombre</option>
-                    <option value="Regular Haircut">Regular Haircut</option>
-                    <option value="Curly Cut">Curly Cut</option>
-                    <option value="Wash and Style">Wash and Style</option>
-                    <option value="Partial Highlights">Partial Highlights</option>
-                    <option value="Balayage">Balayage</option>
-                    <option value="Root Touch-Up">Root Touch-Up</option>
-                    <option value="Hair Trim">Hair Trim</option>
-                    <option value="Deep Conditioning Treatment">Deep Conditioning Treatment</option>
-                    <option value="Scalp Treatment">Scalp Treatment</option>
-                    <option value="Keratin Treatment">Keratin Treatment</option>
-                    <option value="Protein Treatment">Protein Treatment</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="stylist" class="form-label">Select Stylist</label>
-                <select class="form-select" id="stylist" required disabled>
-                    <option selected disabled>Select Stylist</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="time" class="form-label">Select Time</label>
-                <select class="form-select" id="time" disabled>
-                    <option value="">Select Time</option>
-                </select>
-            </div>
-            
-            
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        <div class="card mb-3 card-light-grey p-3">
+            <h2>Book Now</h2>
+            <p>Schedule your appointment below to get started!</p>
+            <p>*Payment not accepted before appointment as prices can vary depending on many factors including hair length, texture, level of Stylist, and/or creative process.</p>
+            <p>*More than one service can be done, discuss with your stylist at the time of your appointment.</p>
+        </div>
+
+        <div class="card mb-3 card-dark-grey p-3">
+            <form id="bookingForm">
+                <div class="mb-3">
+                    <label for="date" class="form-label">Select Date</label>
+                    <input type="date" class="form-control" id="date" required>
+                </div>
+                <div class="mb-3">
+                    <label for="service" class="form-label">Select Service</label>
+                    <select class="form-select" id="service" required>
+                        <option selected disabled>Select Service</option>
+                        <option value="Full Colour">Full Colour</option>
+                        <option value="Ombre">Ombre</option>
+                        <option value="Regular Haircut">Regular Haircut</option>
+                        <option value="Curly Cut">Curly Cut</option>
+                        <option value="Wash and Style">Wash and Style</option>
+                        <option value="Partial Highlights">Partial Highlights</option>
+                        <option value="Balayage">Balayage</option>
+                        <option value="Root Touch-Up">Root Touch-Up</option>
+                        <option value="Hair Trim">Hair Trim</option>
+                        <option value="Deep Conditioning Treatment">Deep Conditioning Treatment</option>
+                        <option value="Scalp Treatment">Scalp Treatment</option>
+                        <option value="Keratin Treatment">Keratin Treatment</option>
+                        <option value="Protein Treatment">Protein Treatment</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="stylist" class="form-label">Select Stylist</label>
+                    <select class="form-select" id="stylist" required disabled>
+                        <option selected disabled>Select Stylist</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="time" class="form-label">Select Time</label>
+                    <select class="form-select" id="time" disabled>
+                        <option value="">Select Time</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
     </main>
 
     <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2024 Coco Hair Salon. All rights reserved.</p>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="scripts.js"></script>
 </body>
