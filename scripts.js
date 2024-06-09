@@ -40,9 +40,77 @@ document.addEventListener('DOMContentLoaded', function() {
                     <option value="Fiona">Fiona</option>
                 `;
                 break;
+            case 'Regular Haircut':
+                stylistSelect.innerHTML = `
+                    <option value="Ava">Ava</option>
+                    <option value="Chloe">Chloe</option>
+                    <option value="Daisy">Daisy</option>
+                    <option value="Mira">Mira</option>
+                `;
+                break;
+            case 'Curly Cut':
+                stylistSelect.innerHTML = `
+                    <option value="Chloe">Chloe</option>
+                    <option value="Mira">Mira</option>
+                `;
+                break;
+            case 'Wash and Style':
+                stylistSelect.innerHTML = `
+                    <option value="Ava">Ava</option>
+                    <option value="Chloe">Chloe</option>
+                    <option value="Mira">Mira</option>
+                `;
+                break;
+            case 'Partial Highlights':
+                stylistSelect.innerHTML = `
+                    <option value="Bella">Bella</option>
+                    <option value="Daisy">Daisy</option>
+                `;
+                break;
+            case 'Balayage':
+                stylistSelect.innerHTML = `
+                    <option value="Chloe">Chloe</option>
+                    <option value="Fiona">Fiona</option>
+                `;
+                break;
+            case 'Root Touch-Up':
+                stylistSelect.innerHTML = `
+                    <option value="Chloe">Chloe</option>
+                `;
+                break;
+            case 'Hair Trim':
+                stylistSelect.innerHTML = `
+                    <option value="Bella">Bella</option>
+                    <option value="Daisy">Daisy</option>
+                    <option value="Fiona">Fiona</option>
+                `;
+                break;
+            case 'Deep Conditioning Treatment':
+                stylistSelect.innerHTML = `
+                    <option value="Bella">Bella</option>
+                `;
+                break;
+            case 'Scalp Treatment':
+                stylistSelect.innerHTML = `
+                    <option value="Bella">Bella</option>
+                    <option value="Fiona">Fiona</option>
+                `;
+                break;
+            case 'Keratin Treatment':
+                stylistSelect.innerHTML = `
+                    <option value="Mira">Mira</option>
+                `;
+                break;
+            case 'Protein Treatment':
+                stylistSelect.innerHTML = `
+                    <option value="Daisy">Daisy</option>
+                    <option value="Mira">Mira</option>
+                `;
+                break;
             // Add more cases for other services
-        }
-
+            default:
+                stylistSelect.innerHTML = '';
+        }        
         stylistSelect.disabled = false;
     });
 
