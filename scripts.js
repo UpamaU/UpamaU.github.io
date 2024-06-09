@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
             // Add more cases for other services
             default:
-                stylistSelect.innerHTML = '<option selected disabled></option>';
+                stylistSelect.innerHTML = '<option selected disabled>Choose a stylist</option>';
         }
         stylistSelect.disabled = false;
     });
@@ -121,26 +121,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     dateInput.addEventListener('change', function() {
-        serviceSelect.innerHTML = '<option selected disabled></option>'; // Reset service options
-        // Re-add service options
-        const services = [
-            "Full Colour", "Ombre", "Regular Haircut", "Curly Cut", "Wash and Style",
-            "Partial Highlights", "Balayage", "Root Touch-Up", "Hair Trim", 
-            "Deep Conditioning Treatment", "Scalp Treatment", "Keratin Treatment", "Protein Treatment"
-        ];
-
-        services.forEach(service => {
-            const option = document.createElement('option');
-            option.value = service;
-            option.textContent = service;
-            serviceSelect.appendChild(option);
-        });
-
-        stylistSelect.innerHTML = '<option selected disabled>Choose a stylist</option>'; // Reset stylist options
-        stylistSelect.disabled = true; // Disable stylist select until service is selected
-        timeInput.innerHTML = '<option selected disabled>Select Time</option>'; // Reset time options
-        timeInput.disabled = true; // Disable time select until stylist is selected
-
         updateAvailableTimes();
     });
 
