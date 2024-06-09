@@ -219,20 +219,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('signupForm');
     const submitButton = document.getElementById('submitButton2');
     const messageDiv = document.getElementById('signupMessage');
-    const emailInput = document.getElementById('email');
 
     form.addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent form submission
 
-        // Validate form fields
-        if (emailInput.value.trim() === '') {
-            messageDiv.innerHTML = '<p class="text-danger">Please enter your email address.</p>';
-        } else if (form.checkValidity()) {
+        if (form.checkValidity()) {
             // Change button text to "Submitted"
             submitButton.innerText = 'Submitted';
             submitButton.disabled = true; // Disable button to prevent multiple submissions
-        } else {
-            messageDiv.innerHTML = '<p class="text-danger">Please fill out the form correctly.</p>';
-        }
+            messageDiv.innerHTML = '<p class="text-success">Email has been sent for sign up. Come to our salon to enjoy 5% off all your visits.</p>';
+        } 
     });
 });
