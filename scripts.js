@@ -158,6 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const appointmentDetails = document.getElementById('appointmentDetails');
     const userDetails = document.getElementById('userDetails');
     const appointmentSummary = document.getElementById('appointmentSummary');
+    const confirmButton = document.getElementById('confirmAppointment');
 
     form.addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent form submission
@@ -191,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function () {
         appointmentSummary.style.display = 'block';
     });
 
-    submitButton.addEventListener('click', function () {
+    confirmButton.addEventListener('click', function () {
         // Submit appointment request logic here
         // For now, simulate a successful request
         appointmentSummary.innerHTML = `
