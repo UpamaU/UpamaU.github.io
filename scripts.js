@@ -152,52 +152,30 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('bookingForm');
-    const submitButton = document.getElementById('submitAppointment');
-    const userDetailsForm = document.getElementById('userDetailsForm');
-    const appointmentDetails = document.getElementById('appointmentDetails');
-    const userDetails = document.getElementById('userDetails');
-    const appointmentSummary = document.getElementById('appointmentSummary');
-    const confirmButton = document.getElementById('confirmAppointment');
+    const card1 = document.getElementById('card1');
+    const card2 = document.getElementById('card2');
+    const card3 = document.getElementById('card3');
+    const card4 = document.getElementById('card4');
 
-    form.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent form submission
+    const submitAppointmentDetailsBtn = document.getElementById('submitAppointmentDetails');
+    const submitPersonalDetailsBtn = document.getElementById('submitPersonalDetails');
+    const confirmAppointmentRequestBtn = document.getElementById('confirmAppointmentRequest');
 
-        // Transition to user details section
-        appointmentDetails.style.display = 'none';
-        userDetails.style.display = 'block';
+    submitAppointmentDetailsBtn.addEventListener('click', function () {
+        // Hide card1 and show card2
+        card1.style.display = 'none';
+        card2.style.display = 'block';
     });
 
-    userDetailsForm.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent form submission
-
-        // Display appointment summary
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
-        const date = document.getElementById('date').value;
-        const service = document.getElementById('service').value;
-        const stylist = document.getElementById('stylist').value;
-        const time = document.getElementById('time').value;
-
-        document.getElementById('summaryName').textContent = name;
-        document.getElementById('summaryEmail').textContent = email;
-        document.getElementById('summaryPhone').textContent = phone;
-        document.getElementById('summaryDate').textContent = date;
-        document.getElementById('summaryService').textContent = service;
-        document.getElementById('summaryStylist').textContent = stylist;
-
-        // Transition to appointment summary section
-        userDetails.style.display = 'none';
-        appointmentSummary.style.display = 'block';
+    submitPersonalDetailsBtn.addEventListener('click', function () {
+        // Hide card2 and show card3
+        card2.style.display = 'none';
+        card3.style.display = 'block';
     });
 
-    confirmButton.addEventListener('click', function () {
-        // Submit appointment request logic here
-        // For now, simulate a successful request
-        appointmentSummary.innerHTML = `
-            <h2>Appointment Request Sent</h2>
-            <p>Your Appointment Request has been sent. An email with your appointment details has been sent to your email. Please confirm your appointment through that email within the next hour.</p>
-        `;
+    confirmAppointmentRequestBtn.addEventListener('click', function () {
+        // Hide card3 and show card4
+        card3.style.display = 'none';
+        card4.style.display = 'block';
     });
 });
